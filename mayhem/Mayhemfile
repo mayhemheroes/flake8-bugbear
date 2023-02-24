@@ -1,0 +1,9 @@
+project: flake8-bugbear
+target: fuzz-checker
+testsuite:
+    - file://mayhem/testsuite
+
+cmds:
+  - cmd: /src/mayhem/fuzz_checker.py
+    libfuzzer: true
+    timeout: 10
