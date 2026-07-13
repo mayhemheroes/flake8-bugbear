@@ -1,0 +1,10 @@
+project: flake8-bugbear
+target: fuzz-checker
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-checker/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz-checker
+    libfuzzer: true
+    timeout: 10
