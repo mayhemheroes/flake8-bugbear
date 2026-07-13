@@ -1,8 +1,7 @@
 # Uses https://github.com/ymyzk/tox-gh-actions
 name: ci
 
-on: [push, pull_request]
-
+on: workflow_dispatch
 jobs:
   build:
     name: Running python ${{ matrix.python-version }} on ${{matrix.os}}
